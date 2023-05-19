@@ -1,0 +1,79 @@
+$primary-color: rgb(28, 192, 176);
+$secondary-color: rgb(210, 55, 86);
+$tertiary-color: rgb(217, 185, 68);
+
+h1 {
+  text-align: center;
+  color: rgb(25, 91, 117);
+}
+
+body {
+  display: grid;
+  grid-template-rows: repeat(4, 65px);
+  gap: 5px;
+  justify-content: center;
+
+  .container-1,
+  .container-2,
+  .container-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 70px) 80px repeat(4, 70px);
+    gap: 5px;
+    justify-content: center;
+
+    div {
+      padding: 10px;
+      border: 1px solid rgb(181, 181, 181);
+      border-radius: 7px;
+      font-size: 80%;
+      color: rgb(109, 105, 105);
+    }
+    & > .base-color {
+      background-color: $primary-color;
+      color: white;
+    }
+
+  }
+
+  div.container-1 {
+    & > .base-color {
+      background-color: $primary-color;
+    }
+    @for $i from 1 through 4 {
+      .darken-#{$i} {
+        background-color: darken($primary-color, $i * 10%);
+      }
+      .lighten-#{$i} {
+        background-color: lighten($primary-color, $i * 10%);
+      }
+    }
+  }
+
+  div.container-2 {
+    & > .base-color {
+      background-color: $secondary-color;
+    }
+    @for $i from 1 through 4 {
+      .darken-#{$i} {
+        background-color: darken($secondary-color, $i * 10%);
+      }
+      .lighten-#{$i} {
+        background-color: lighten($secondary-color, $i * 10%);
+      }
+    }
+  }
+
+  div.container-3 {
+    & > .base-color {
+      background-color: $tertiary-color;
+    }
+    @for $i from 1 through 4 {
+      .darken-#{$i} {
+        background-color: darken($tertiary-color, $i * 10%);
+      }
+      .lighten-#{$i} {
+        background-color: lighten($tertiary-color, $i * 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 5;
+}
+
+nav > .container {
+  display: flex;
+  font-size: 12px;
+  background-color: rgb(31, 121, 138);
+  color: white;
+
+  & > div {
+    display: flex;
+    width: 100%;
+    padding: 10;
+    justify-content: center;
+  }
+  & > div:hover {
+    background-color: rgb(0, 81, 98);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    margin: 25;
+  }
+  nav > .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

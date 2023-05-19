@@ -1,0 +1,43 @@
+@use "base1" as base;
+
+html {
+  font-family: Comic Sans MS;
+  font-size: 12px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 93px;
+  grid-template-rows: 65px 65px 65px 36px 32px 65px;
+  border-radius: 15%;
+
+  & > :nth-child(-n + 3),
+  :nth-child(6) {
+    border: 1px solid gray;
+    padding: 13px;
+    border-radius: 6%;
+  }
+  & > .box-1 {
+    background-color: base.$primary-color;
+  }
+  & > .box-2 {
+    background-color: base.$secondary-color;
+  }
+  & > .box-3 {
+    background-color: base.$ternary-color;
+  }
+  & > .box-4 {
+    padding-top: 13px;
+    font-family: base.$principal-font;
+    font-size: 13px;
+  }
+  & > .box-5 {
+    padding-top: 5px;
+    font-family: base.$secondary-font;
+    font-size: 13.5px;
+    width: max-content;
+  }
+  & > .box-6 {
+    box-shadow: base.$shadow;
+  }
+}

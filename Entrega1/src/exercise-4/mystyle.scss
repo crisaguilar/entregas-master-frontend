@@ -1,0 +1,59 @@
+body {
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12;
+  line-height: 1.7;
+  background-color: rgb(222, 217, 217);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 340px;
+
+  & > .image {
+    width: 100%;
+  }
+
+  & > .card-container {
+    display: grid;
+    border: 1px solid rgb(181, 181, 181);
+    margin: 2;
+    background-color: white;
+    grid-template-rows: auto;
+  }
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.card-text {
+  margin: 7;
+
+  & > .city-information {
+    color: rgb(85, 83, 83);
+  }
+
+  & > .date-container {
+    display: grid;
+    justify-content: end;
+    grid-template-columns: 65px 75px;
+
+    & > :nth-child(1) {
+      font-weight: bold;
+    }
+    & > :nth-child(2) {
+      color: rgb(136, 208, 116);
+    }
+  }
+
+  & > button {
+    background-color: rgb(97, 182, 73);
+    color: white;
+    border: none;
+    padding: 11;
+    width: 100%;
+  }
+  & > button:hover {
+    background-color: rgb(122, 185, 105);
+  }
+}
