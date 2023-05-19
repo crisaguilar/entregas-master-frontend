@@ -4,10 +4,10 @@ body {
   font-size: 12;
   line-height: 1.7;
   background-color: rgb(222, 217, 217);
+  grid-template-columns: 20%;
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 340px;
 
   & > .image {
     width: 100%;
@@ -22,12 +22,12 @@ body {
   }
 }
 
-h1 {
-  font-weight: normal;
-}
-
 .card-text {
   margin: 7;
+
+  & > h1 {
+    font-weight: normal;
+  }
 
   & > .city-information {
     color: rgb(85, 83, 83);
@@ -36,7 +36,7 @@ h1 {
   & > .date-container {
     display: grid;
     justify-content: end;
-    grid-template-columns: 65px 75px;
+    grid-template-columns: 20% 25%;
 
     & > :nth-child(1) {
       font-weight: bold;
