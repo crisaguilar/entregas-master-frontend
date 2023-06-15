@@ -1,10 +1,15 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
+  context: path.resolve(__dirname, "./src"),
+  resolve: {
+    extensions: [".js", ".ts", ".tsx"],
+  },
+  mode: "development",
   entry: {
-    app: ["./src/myApp.js"],
-    service: ["./src/averageService.js"],
+    app: ["./index.tsx"],
   },
   output: {
     filename: "[name].[chunkhash].js",
@@ -13,14 +18,34 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                exportLocalsConvention: "camelCase",
+                localIdentName: "[path][name]__[local]___[hash:base64:5]",
+              },
+            },
+          },
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        type: "asset/resource",
       },
     ],
   },
@@ -29,7 +54,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "index.html",
       filename: "index.html",
       scriptLoading: "blocking",
     }),
