@@ -1,5 +1,6 @@
 console.log("************** DELIVERABLE 01 *********************");
 // Implementa una función head (inmutable), tal que, dado un array como entrada extraiga y devuelva su primer elemento. Utiliza destructuring.
+
 const names = ["Alex", "Cristina", "Adrian", "Pedro"];
 const head = ([first]) => first; // Implementation here.
 console.log(head(names));
