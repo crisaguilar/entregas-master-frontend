@@ -1,0 +1,28 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background-color: #f0eda4;
+
+  #container {
+    display: flex;
+    align-items: center;
+
+    .image {
+      margin-right: 30px;
+    }
+  }
+
+  .navigation {
+    a {
+      text-decoration: none;
+      color: #25857d;
+      margin-right: 10px;
+      &.selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+}

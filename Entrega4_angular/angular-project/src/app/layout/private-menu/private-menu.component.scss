@@ -1,0 +1,35 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f0eda4;
+
+  #image {
+    display: flex;
+    align-items: center;
+
+    .image {
+      margin-right: 30px;
+    }
+  }
+  .userName {
+    margin-right: 20px;
+    color: #25857d;
+  }
+
+  .navigation {
+    a {
+      text-decoration: none;
+      color: #25857d;
+      margin-right: 10px;
+      &.selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+  app-logout {
+    margin-left: auto;
+  }
+}
