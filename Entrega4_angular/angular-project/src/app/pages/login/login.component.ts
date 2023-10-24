@@ -2,15 +2,10 @@ import { Component, Input } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 import { Subscription } from 'rxjs';
 
-
-
 interface User {
   userName: string;
   password: string;
 }
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

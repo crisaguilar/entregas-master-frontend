@@ -1,6 +1,5 @@
 <router-outlet>
-
-<app-public-menu *ngIf="!isLogged"></app-public-menu>
-<app-private-menu *ngIf="isLogged"></app-private-menu>
+  <app-public-menu *ngIf="!isLogged"></app-public-menu>
+  <app-private-menu *ngIf="isLogged"></app-private-menu>
+  <app-footer></app-footer>
 </router-outlet>
-

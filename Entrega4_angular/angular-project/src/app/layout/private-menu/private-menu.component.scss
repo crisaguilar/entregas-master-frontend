@@ -4,18 +4,27 @@
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #f0eda4;
+  margin: 0;
 
-  #image {
+  #container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 
     .image {
       margin-right: 30px;
+    }
+    .pageName {
+      color: #25857d;
     }
   }
   .userName {
     margin-right: 20px;
     color: #25857d;
+    p {
+      margin: 0;
+    }
   }
 
   .navigation {

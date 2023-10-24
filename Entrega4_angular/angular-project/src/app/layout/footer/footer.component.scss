@@ -1,0 +1,14 @@
+.container {
+  flex: 1; /* Hace que el contenido principal llene el espacio restante en la página */
+  padding: 20px;
+}
+
+footer {
+  background-color: #f0eda4;
+  color: #25857d;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

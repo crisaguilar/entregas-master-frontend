@@ -7,10 +7,15 @@
 
   #container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 
     .image {
       margin-right: 30px;
+    }
+    .pageName {
+      color: #25857d;
     }
   }
 
@@ -24,5 +29,4 @@
       }
     }
   }
-
 }

@@ -1,28 +1,38 @@
+h1 {
+  display: flex;
+  margin-top: 20px;
+  font-size: 25px;
+  justify-content: center;
+  color: #25857d;
+}
+
 #container {
   display: flex;
   height: 100vh;
   align-items: center;
-  flex-direction: column; 
-  
+  flex-direction: column;
+
   .full-width {
     width: 100%;
   }
 
-  .loginButton {
-    width: 80px;
-    padding: 3px;
-    margin-top: 3px;
-    margin-left: 3px;
-    background-color: #f0eda4;
-    border: none;
-    border-radius: 7px;
-    color: #25857d;
-    font-weight: bold;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-      background-color: darken(#f0eda4, 10%);
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    .loginButton {
+      width: 80px;
+      padding: 3px;
+      background-color: #f0eda4;
+      border: none;
+      border-radius: 7px;
+      color: #25857d;
+      font-weight: bold;
+
+      cursor: pointer;
+      &:hover {
+        background-color: darken(#f0eda4, 10%);
+      }
     }
   }
 }
-

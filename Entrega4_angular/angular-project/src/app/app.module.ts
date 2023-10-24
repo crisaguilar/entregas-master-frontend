@@ -15,8 +15,9 @@ import { PrivateMenuComponent } from './layout/private-menu/private-menu.compone
 import { PublicMenuComponent } from './layout/public-menu/public-menu.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { FormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {MatInputModule} from '@angular/material/input';
     PrivateMenuComponent,
     PublicMenuComponent,
     LogoutComponent,
-
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
