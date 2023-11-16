@@ -8,7 +8,7 @@ export interface MemberDetail {
 }
 
 export interface Member {
-  id: string;
+  id: number;
   login: string;
   avatar_url: string;
 }
