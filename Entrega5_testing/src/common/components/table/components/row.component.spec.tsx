@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import { RowComponent } from './row.component';
 
 describe('common/table/RowComponent', () => {
+  const tbody = document.createElement('tbody');
   it('should render as expected passing required properties', () => {
     // Arrange
     const props = {
@@ -14,7 +15,10 @@ describe('common/table/RowComponent', () => {
     const { getByText, getByTestId } = render(
       <RowComponent {...props}>
         <td>{'Test rowData'}</td>
-      </RowComponent>
+      </RowComponent>,
+      {
+        container: document.body.appendChild(tbody),
+      }
     );
 
     // Assert
@@ -33,7 +37,10 @@ describe('common/table/RowComponent', () => {
       <RowComponent {...props}>
         <td>{'Test rowData 1'}</td>
         <td>{'Test rowData 2'}</td>
-      </RowComponent>
+      </RowComponent>,
+      {
+        container: document.body.appendChild(tbody),
+      }
     );
 
     // Assert
