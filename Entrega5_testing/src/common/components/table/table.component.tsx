@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { SearchBarComponent } from '../search-bar';
 import { PaginationComponent } from '../pagination';
-import { ConfirmationDialogComponent } from '../confirmation-dialog';
+import { ConfirmationDialog } from '../confirmation-dialog';
 import { HeaderComponent, BodyComponent } from './components';
 import { RowRendererProps, LabelProps } from './table.vm';
 import * as classes from './table.styles';
@@ -94,7 +94,7 @@ export const TableComponent: React.FunctionComponent<Props> = (props) => {
           </Button>
         )}
         {onDelete && (
-          <ConfirmationDialogComponent
+          <ConfirmationDialog
             isOpen={isOpenConfirmation}
             onAccept={onDelete}
             onClose={onCloseConfirmation}
@@ -107,7 +107,7 @@ export const TableComponent: React.FunctionComponent<Props> = (props) => {
             <Typography variant="body1">
               {labels.deleteContent({ itemName: itemToDeleteName })}
             </Typography>
-          </ConfirmationDialogComponent>
+          </ConfirmationDialog>
         )}
       </div>
     </div>

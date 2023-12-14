@@ -77,7 +77,7 @@ export const TableContainer: React.FunctionComponent<Props> = props => {
     }
   };
 
-  return (
+  return ( 
     <TableComponent
       className={className}
       tableProps={{ ...getTableProps() }}

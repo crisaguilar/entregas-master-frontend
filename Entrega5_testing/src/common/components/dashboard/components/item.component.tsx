@@ -10,6 +10,7 @@ export interface ClassesProps {
   icon?: string;
   title?: string;
   subtitle?: string;
+
 }
 
 interface Props {

@@ -26,6 +26,7 @@ describe('common/DashboardComponent', () => {
           path={props.items[0].linkTo}
           element={<h1>Test route destination</h1>}
         />
+        
       </>
     );
 
