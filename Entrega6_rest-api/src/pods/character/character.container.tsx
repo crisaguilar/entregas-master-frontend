@@ -5,21 +5,18 @@ import { getCharacter } from './api/character.api';
 import { CharacterComponent } from './character.component';
 import { mapCharacterFromApiToVm } from './character.mappers';
 
-
-export const CharacterContainer:React.FunctionComponent=()=>{
+export const CharacterContainer: React.FunctionComponent = () => {
   const { id } = useParams<{ id: string }>();
   const [character, setCharacter] = React.useState<Character>();
 
-  const handleCharacter = async ()=> {
-    const apiCharacter= await getCharacter(id);
-    setCharacter(mapCharacterFromApiToVm(apiCharacter))
-  }
+  const handleCharacter = async () => {
+    const apiCharacter = await getCharacter(id);
+    setCharacter(mapCharacterFromApiToVm(apiCharacter));
+  };
 
   React.useEffect(() => {
-    handleCharacter;
+    handleCharacter();
   }, []);
 
-  return (
-   <CharacterComponent character={character} />
-  );
+  return <CharacterComponent character={character} />;
 };

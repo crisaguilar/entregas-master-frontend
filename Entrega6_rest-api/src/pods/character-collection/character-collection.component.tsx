@@ -15,7 +15,7 @@ export const CharacterCollectionComponent: React.FunctionComponent<Props> = (
   const navigate = useNavigate();
 
   return (
-    <div className={classes.list}>
+    <div>
       <ul className={classes.list}>
         {characterCollection.map((character) => (
           <li

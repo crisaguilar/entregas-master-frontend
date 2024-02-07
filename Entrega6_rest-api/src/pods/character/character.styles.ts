@@ -5,3 +5,9 @@ export const root = css`
   flex-direction: column;
   justify-content: center;
 `;
+
+export const info = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;

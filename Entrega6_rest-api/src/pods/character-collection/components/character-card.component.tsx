@@ -26,7 +26,7 @@ export const CharacterCard: React.FunctionComponent<Props> = (props) => {
           <CardMedia
             image={character.picture}
             title={character.name}
-            style={{ height: 0, paddingTop: '56.25%' }}
+            style={{ height: 0, paddingTop: '57%' }}
           />
           <Typography variant="subtitle1">{character.species}</Typography>
         </div>

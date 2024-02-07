@@ -8,7 +8,7 @@ export const CharacterCollectionContainer= () => {
 
   React.useEffect(()=> {
     loadCharacterCollection();
-  } )
+  },[] )
 
   return(
     <CharacterCollectionComponent
