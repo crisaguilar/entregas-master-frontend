@@ -4,7 +4,8 @@
   "description": "Rest API demos",
   "main": "index.js",
   "scripts": {
-    "start": "run-p -l type-check:watch start:dev start:server",
+    "start": "run-p -l type-check:watch start:dev",
+    "start2": "run-p -l type-check:watch start:dev start:server",
     "start:dev": "webpack serve --config ./config/webpack/dev.js",
     "start:server": "cd server && npm run mock-server",
     "build": "run-p -l type-check build:prod",
