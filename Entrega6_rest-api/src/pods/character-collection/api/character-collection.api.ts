@@ -1,9 +1,10 @@
-import { CharactersApiResponse } from './character-collection.api-model';
+import { Character } from 'pods/character/api';
+// import { CharactersApiResponse } from './character-collection.api-model';
 
-const url = 'https://rickandmortyapi.com/api/character';
+const url = 'http://localhost:3000/api/character';
 
 export const getCharacterCollection =
-  async (): Promise<CharactersApiResponse> => {
+  async (): Promise<Character[]> => {
     const response = await fetch(url);
     if (response.ok) {
       return await response.json();
