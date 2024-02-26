@@ -6,8 +6,11 @@ export const mapCharacterFromApiToVm = (
 ): viewModel.Character => ({
   ...character,
   id: character.id.toString(),
-  picture: character.image,
-  name: character.name,
-  species: character.species,
-  gender: character.gender,
+});
+
+export const mapCharacterFromVmToApi = (
+  character: viewModel.Character
+): apiModel.Character => ({
+  ...character,
+  id: Number(character.id)
 });

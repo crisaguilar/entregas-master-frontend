@@ -1,7 +1,8 @@
 export interface Character {
   id: string;
-  picture: string;
+  image: string;
   name: string;
   species: string;
   gender: string;
+  bestSentences?: string;
 }

@@ -1,16 +1,17 @@
 export interface Character {
   id: number;
   name: string;
-  status: string;
+  // status: string;
   species: string;
-  type: string;
+  // type: string;
   gender: string;
-  origin: Origin;
-  location: Location;
+  // origin: Origin;
+  // location: Location;
   image: string;
-  episode: string[];
-  url: string;
-  created: string;
+  // episode: string[];
+  // url: string;
+  // created: string;
+  bestSentences?: string;
 }
 
 interface Origin {
