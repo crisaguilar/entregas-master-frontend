@@ -1,10 +1,8 @@
 import { TextFieldComponent } from 'common/components';
 import { Formik, Form, FieldArray } from 'formik';
 import * as React from 'react';
-// import { Character } from '../character.vm';
 import { Button } from '@mui/material';
 
-// import * as ReactDOM from 'react-dom';
 
 interface Props {
   bestSentences: string;
@@ -30,7 +28,7 @@ export const CharacterFormComponent: React.FunctionComponent<Props> = (
           rows={1}
         />
         <Button type="submit" variant="contained" color="primary">
-          Edit
+          Save
         </Button>
       </Form>
     </Formik>
