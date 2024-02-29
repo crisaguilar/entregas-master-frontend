@@ -1,12 +1,11 @@
-import { TextFieldComponent } from 'common/components';
-import { Formik, Form, FieldArray } from 'formik';
-import * as React from 'react';
+import React from 'react';
+import { Formik, Form, FieldArray, Field } from 'formik';
 import { Button } from '@mui/material';
-
+import { CharacterFormData } from '../character.vm';
 
 interface Props {
-  bestSentences: string;
-  onSave: (value: { bestSentences: string }) => void;
+  bestSentences: string[];
+  onSave: (value: CharacterFormData) => void;
 }
 
 export const CharacterFormComponent: React.FunctionComponent<Props> = (
@@ -20,17 +19,44 @@ export const CharacterFormComponent: React.FunctionComponent<Props> = (
       initialValues={{ bestSentences }}
       enableReinitialize={true}
     >
-      <Form>
-        <TextFieldComponent
-          name="bestSentences"
-          label="Best Sentences"
-          multiline={true}
-          rows={1}
-        />
-        <Button type="submit" variant="contained" color="primary">
-          Save
-        </Button>
-      </Form>
+      {({ values }) => (
+        <Form>
+          <FieldArray
+            name="bestSentences"
+            render={(arrayHelpers) => (
+              <div>
+                {values.bestSentences && values.bestSentences.length > 0 ? (
+                  values.bestSentences.map((sentence, index) => (
+                    <div key={index}>
+                      <Field name={`bestSentences.${index}`} />
+                      <button
+                        type="button"
+                        onClick={() => arrayHelpers.remove(index)}
+                      >
+                        -
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => arrayHelpers.insert(index, '')}
+                      >
+                        +
+                      </button>
+                    </div>
+                  ))
+                ) : (
+                  <button type="button" onClick={() => arrayHelpers.push('')}>
+                    Add
+                  </button>
+                )}
+              </div>
+            )}
+          />
+
+          <Button type="submit" variant="contained" color="primary">
+            Save
+          </Button>
+        </Form>
+      )}
     </Formik>
   );
 };

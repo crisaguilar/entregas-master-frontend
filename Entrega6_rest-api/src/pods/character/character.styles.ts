@@ -10,4 +10,8 @@ export const info = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 10px;
+`;
+export const editButton = css`
+  align-self: flex-start;
 `;

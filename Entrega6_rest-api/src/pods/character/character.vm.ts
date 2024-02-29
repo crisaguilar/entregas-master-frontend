@@ -4,5 +4,9 @@ export interface Character {
   name: string;
   species: string;
   gender: string;
-  bestSentences?: string;
+  bestSentences?: string[];
+}
+
+export interface CharacterFormData{
+  bestSentences: string[];
 }

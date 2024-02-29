@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Character } from './character.vm';
+import React from 'react';
+import { Character, CharacterFormData } from './character.vm';
 import { Character as ApiCharacter } from './api/character.api-model';
 import { useParams } from 'react-router-dom';
 import { getCharacter, saveCharacterSentence } from './api/character.api';
@@ -12,6 +12,7 @@ import {
 export const CharacterContainer: React.FunctionComponent = () => {
   const { id } = useParams<{ id: string }>();
   const [character, setCharacter] = React.useState<Character>();
+  const [sentences, setSentences] = React.useState<string[]>([]);
   const [isError, setIsError] = React.useState<boolean>(false);
   const handleApiCall = async (apiCall: () => Promise<ApiCharacter>) => {
     try {
@@ -26,8 +27,8 @@ export const CharacterContainer: React.FunctionComponent = () => {
     handleApiCall(() => getCharacter(id));
   };
 
-  const onSave = (values) => {
-    const payloadCharacter = {
+  const onSave = (values: CharacterFormData) => {
+    const payloadCharacter: Character = {
       ...character,
       bestSentences: values.bestSentences,
     };

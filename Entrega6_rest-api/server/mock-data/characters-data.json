@@ -1,6 +1,8 @@
 {
   "character": [
     {
+      "0": "hola caracola,la mejor frase del mundo, hola, caracola",
+      "1": "la mejor frase del mundo",
       "id": 1,
       "name": "Rick Sanchez",
       "status": "Alive",
@@ -69,9 +71,9 @@
         "https://rickandmortyapi.com/api/episode/50",
         "https://rickandmortyapi.com/api/episode/51"
       ],
+      "bestSentences": [],
       "url": "https://rickandmortyapi.com/api/character/1",
-      "created": "2017-11-04T18:48:46.250Z",
-      "bestSentences": "hola que tal"
+      "created": "2017-11-04T18:48:46.250Z"
     },
     {
       "id": 2,
@@ -142,9 +144,9 @@
         "https://rickandmortyapi.com/api/episode/50",
         "https://rickandmortyapi.com/api/episode/51"
       ],
+      "bestSentences": [],
       "url": "https://rickandmortyapi.com/api/character/2",
-      "created": "2017-11-04T18:50:21.651Z",
-      "bestSentences": "hola"
+      "created": "2017-11-04T18:50:21.651Z"
     },
     {
       "id": 3,
@@ -207,7 +209,8 @@
         "https://rickandmortyapi.com/api/episode/51"
       ],
       "url": "https://rickandmortyapi.com/api/character/3",
-      "created": "2017-11-04T19:09:56.428Z"
+      "created": "2017-11-04T19:09:56.428Z",
+      "bestSentences": []
     },
     {
       "id": 4,
@@ -419,8 +422,7 @@
         "https://rickandmortyapi.com/api/episode/24"
       ],
       "url": "https://rickandmortyapi.com/api/character/9",
-      "created": "2017-11-04T20:06:54.976Z",
-      "bestSentences": "."
+      "created": "2017-11-04T20:06:54.976Z"
     },
     {
       "id": 10,
