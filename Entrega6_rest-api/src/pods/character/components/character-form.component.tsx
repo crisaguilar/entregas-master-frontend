@@ -1,6 +1,7 @@
 import React from 'react';
+import * as classes from '../character.styles';
 import { Formik, Form, FieldArray, Field } from 'formik';
-import { Button } from '@mui/material';
+import { ButtonGroup, Button } from '@mui/material';
 import { CharacterFormData } from '../character.vm';
 
 interface Props {
@@ -28,33 +29,54 @@ export const CharacterFormComponent: React.FunctionComponent<Props> = (
                 {values.bestSentences && values.bestSentences.length > 0 ? (
                   values.bestSentences.map((sentence, index) => (
                     <div key={index}>
-                      <Field name={`bestSentences.${index}`} />
-                      <button
-                        type="button"
-                        onClick={() => arrayHelpers.remove(index)}
+                      <Field
+                        helperText="Write a sentence."
+                        variant="standard"
+                        name={`bestSentences.${index}`}
+                      />
+                      <ButtonGroup
+                        variant="outlined"
+                        aria-label="Basic button group"
                       >
-                        -
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => arrayHelpers.insert(index, '')}
-                      >
-                        +
-                      </button>
+                        <Button
+                          variant="outlined"
+                          type="button"
+                          onClick={() => arrayHelpers.remove(index)}
+                        >
+                          -
+                        </Button>
+                        <Button
+                          variant="outlined"
+                          type="button"
+                          onClick={() => arrayHelpers.insert(index, '')}
+                        >
+                          +
+                        </Button>
+                      </ButtonGroup>
                     </div>
                   ))
                 ) : (
-                  <button type="button" onClick={() => arrayHelpers.push('')}>
+                  <Button
+                    type="button"
+                    variant="outlined"
+                    color="primary"
+                    onClick={() => arrayHelpers.push('')}
+                  >
                     Add
-                  </button>
+                  </Button>
                 )}
+
+                <Button
+                  className={classes.saveButton}
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                >
+                  Save
+                </Button>
               </div>
             )}
           />
-
-          <Button type="submit" variant="contained" color="primary">
-            Save
-          </Button>
         </Form>
       )}
     </Formik>

@@ -4,6 +4,7 @@ import { Character as ApiCharacter } from './api/character.api-model';
 import { useParams } from 'react-router-dom';
 import { getCharacter, saveCharacterSentence } from './api/character.api';
 import { CharacterComponent } from './components/character.component';
+import * as classes from './character.styles';
 import {
   mapCharacterFromApiToVm,
   mapCharacterFromVmToApi,
@@ -12,7 +13,6 @@ import {
 export const CharacterContainer: React.FunctionComponent = () => {
   const { id } = useParams<{ id: string }>();
   const [character, setCharacter] = React.useState<Character>();
-  const [sentences, setSentences] = React.useState<string[]>([]);
   const [isError, setIsError] = React.useState<boolean>(false);
   const handleApiCall = async (apiCall: () => Promise<ApiCharacter>) => {
     try {
