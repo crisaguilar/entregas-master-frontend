@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
 import { MemberList } from "./components/MemberList";
+import { fetchMembers } from "../getAPI";
 
 interface MemberEntity {
   id: string;
@@ -20,24 +21,23 @@ export const ListContainer: React.FC = () => {
     React.useState<string>(urlOrganization);
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
 
-  function fetchMembers(organization: string) {
-    fetch(`https://api.github.com/orgs/${organization}/members`)
-      .then((response) => response.json())
-      .then((json) => setMembers(json));
+
+  function updateMembers() {
+    fetchMembers(organization).then(setMembers);
   }
 
   React.useEffect(() => {
-    fetchMembers(organization);
+    updateMembers();
   }, []);
 
   return (
     <>
       <SearchBar
-        getMembers={fetchMembers}
+        getMembers={updateMembers}
         organization={organization}
         setOrganization={setOrganization}
       />
-      <MemberList members={members} />
+      <MemberList members={members} organization={organization} />
     </>
   );
 };

@@ -10,9 +10,10 @@ interface MemberEntity {
 
 interface Props {
   members: MemberEntity[];
+  organization:string,
 }
 
-export const MemberList: React.FC<Props> = ({members}: Props) => {
+export const MemberList: React.FC<Props> = ({ members, organization }: Props) => {
   return (
     <div className="member-list-container">
       <Box sx={{ flexDirection: "row" }}>Avatar </Box>
@@ -26,10 +27,11 @@ export const MemberList: React.FC<Props> = ({members}: Props) => {
             variant="rounded"
           />
           <Typography>{member.id}</Typography>
-          <Link to={`/detail/${member.login}`}>{member.login}</Link>
+          <Link to={`/detail/${organization}/${member.login}`}>
+            {member.login}
+          </Link>
         </>
       ))}
-      {/* <Link to="/detail">Navigate to detail page</Link> */}
     </div>
   );
 };
