@@ -10,10 +10,13 @@ interface MemberEntity {
 
 interface Props {
   members: MemberEntity[];
-  organization:string,
+  organization: string;
 }
 
-export const MemberList: React.FC<Props> = ({ members, organization }: Props) => {
+export const MemberList: React.FC<Props> = ({
+  members,
+  organization,
+}: Props) => {
   return (
     <div className="member-list-container">
       <Box sx={{ flexDirection: "row" }}>Avatar </Box>

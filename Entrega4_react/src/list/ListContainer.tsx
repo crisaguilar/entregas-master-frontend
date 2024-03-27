@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
 import { MemberList } from "./components/MemberList";
 import { fetchMembers } from "../getAPI";
+import { Alert, AlertTitle, Snackbar, Typography } from "@mui/material";
 
 interface MemberEntity {
   id: string;
@@ -20,10 +21,17 @@ export const ListContainer: React.FC = () => {
   const [organization, setOrganization] =
     React.useState<string>(urlOrganization);
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
-
+  const [isError, setIsError] = React.useState<Boolean>(false);
 
   function updateMembers() {
-    fetchMembers(organization).then(setMembers);
+    fetchMembers(organization)
+      .then((members) => {
+        setMembers(members);
+        setIsError(false);
+      })
+      .catch((error) => {
+        setIsError(true);
+      });
   }
 
   React.useEffect(() => {
@@ -37,7 +45,11 @@ export const ListContainer: React.FC = () => {
         organization={organization}
         setOrganization={setOrganization}
       />
-      <MemberList members={members} organization={organization} />
+      {isError ? (
+        <Typography> Company not found, try with another name</Typography>
+      ) : (
+        <MemberList members={members} organization={organization} />
+      )}
     </>
   );
 };
