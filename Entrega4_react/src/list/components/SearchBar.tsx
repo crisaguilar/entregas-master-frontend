@@ -1,7 +1,8 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
+import './searchBar.css';
 
 interface Props {
   organization: string;
@@ -17,7 +18,7 @@ export const SearchBar: React.FC<Props> = ({
   const navigate = useNavigate();
 
   return (
-    <>
+    <div className="search container">
       <TextField
         type="text"
         value={organization}
@@ -36,6 +37,6 @@ export const SearchBar: React.FC<Props> = ({
       >
         Search
       </Button>
-    </>
+    </div>
   );
 };

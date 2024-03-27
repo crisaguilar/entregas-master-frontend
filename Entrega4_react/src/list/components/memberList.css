@@ -1,0 +1,40 @@
+.member-list-container {
+  display: grid;
+  grid-template-columns: 80px 1fr 3fr;
+  grid-template-rows: 20px;
+  grid-auto-rows: 70px;
+  gap: 20px 5px;
+  padding: 20px;
+  font-family: Raleway, Arial;
+}
+
+.member-list-container .MuiBox-root {
+  background-color: #1980ee;
+  color: white;
+  padding: 12px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.member-list-container .MuiAvatar-root {
+  width: 75px;
+  height: 75px;
+}
+
+.member-list-container .MuiTypography-root,
+.member-list-container a {
+  font-size: 16px;
+  background-color: #d6f2ed;
+  border-radius: 5px;
+  padding: 12px 10px;
+}
+
+.member-list-container a {
+  color: #1271d6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.member-list-container a:hover {
+  color: #1271d6;
+}

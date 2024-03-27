@@ -1,0 +1,24 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; 
+  }
+
+  .login-container .MuiTypography-root {
+    margin-bottom: 10px; 
+    color: rgb(39, 134, 229);
+  }
+
+
+  .login-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px; 
+  }
+
+  .MuiButton-root {
+    width: 200px; 
+  }

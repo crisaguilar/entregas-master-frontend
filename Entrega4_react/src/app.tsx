@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Login } from "./Login";
+import { Login } from "./Login/Login";
 import { ListContainer } from "./list/ListContainer";
-import { Detail } from "./Detail";
+import { Detail } from "./Detail/Detail";
 
 export const App = () => {
   return (

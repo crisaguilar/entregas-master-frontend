@@ -13,6 +13,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true
   },
-  "include": ["src/**/*", "src/Detail.tsx"],
+  "include": ["src/**/*", "src/Detail/Detail.tsx"],
   "exclude": ["node_modules"]
 }

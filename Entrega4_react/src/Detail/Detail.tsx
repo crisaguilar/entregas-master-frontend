@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Avatar, Button, Typography } from "@mui/material";
-import { fetchMember, MemberEntity } from "./getAPI";
+import { fetchMember, MemberEntity } from "../getAPI";
+import './detail.css';
 
 const defaultMemeberDetail = (): MemberEntity => ({
   id: "",
@@ -35,7 +36,7 @@ export const Detail: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="detail-container">
       {isError ? (
         <Typography>I'm sorry, this Eemployee doesn't exist</Typography>
       ) : (
@@ -58,6 +59,6 @@ export const Detail: React.FC = () => {
       <Button onClick={goBack} variant="outlined" type="submit">
         Back
       </Button>
-    </>
+    </div>
   );
 };

@@ -1,0 +1,13 @@
+.search.container {
+  display: flex;
+  align-items: baseline;
+  padding: 10px;
+}
+
+.search.container .MuiButton-root {
+  margin-left: 5px;
+}
+
+.search.container .MuiInputBase-root {
+  flex: 1;
+}

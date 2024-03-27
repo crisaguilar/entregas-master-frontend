@@ -1,0 +1,22 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.detail-container .MuiTypography-root {
+  margin-bottom: 10px;
+}
+
+.detail-container .MuiAvatar-root {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.detail-container .MuiButton-root {
+  margin-top: 5px;
+}
