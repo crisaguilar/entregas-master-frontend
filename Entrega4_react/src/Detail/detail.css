@@ -5,6 +5,11 @@
   justify-content: center;
   text-align: center;
   padding: 15px;
+  background-color: #dbfcf6;
+  border-radius: 7px;
+  width: 30%;
+  color: rgb(31, 115, 200);
+  border: 1px solid rgb(39, 134, 229);
 }
 
 .detail-container .MuiTypography-root {

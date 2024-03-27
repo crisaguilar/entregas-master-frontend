@@ -1,0 +1,13 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.error-container .MuiTypography-root {
+  color: rgb(39, 134, 229);
+  border: 1px solid rgb(39, 134, 229);
+  border-radius: 5px;
+  padding: 18px;
+}

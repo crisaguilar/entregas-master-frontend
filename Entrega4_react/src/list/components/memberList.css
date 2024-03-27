@@ -9,7 +9,7 @@
 }
 
 .member-list-container .MuiBox-root {
-  background-color: #1980ee;
+  background-color: rgb(39, 134, 229);
   color: white;
   padding: 12px 10px;
   border-radius: 5px;
@@ -30,11 +30,11 @@
 }
 
 .member-list-container a {
-  color: #1271d6;
+  color: rgb(39, 134, 229);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .member-list-container a:hover {
-  color: #1271d6;
+  color: rgb(39, 134, 229);
 }

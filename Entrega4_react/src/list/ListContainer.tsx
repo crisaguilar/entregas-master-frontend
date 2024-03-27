@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
 import { MemberList } from "./components/MemberList";
 import { fetchMembers } from "../getAPI";
-import { Alert, AlertTitle, Snackbar, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import "./listContainer.css";
 
 interface MemberEntity {
   id: string;
@@ -39,17 +40,19 @@ export const ListContainer: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <SearchBar
         getMembers={updateMembers}
         organization={organization}
         setOrganization={setOrganization}
       />
       {isError ? (
-        <Typography> Company not found, try with another name</Typography>
+        <div className="error-container">
+          <Typography> Company not found, try with another name</Typography>
+        </div>
       ) : (
         <MemberList members={members} organization={organization} />
       )}
-    </>
+    </div>
   );
 };

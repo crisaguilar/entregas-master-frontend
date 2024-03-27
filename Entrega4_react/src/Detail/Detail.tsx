@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Avatar, Button, Typography } from "@mui/material";
 import { fetchMember, MemberEntity } from "../getAPI";
-import './detail.css';
+import "./detail.css";
 
 const defaultMemeberDetail = (): MemberEntity => ({
   id: "",
@@ -38,7 +38,9 @@ export const Detail: React.FC = () => {
   return (
     <div className="detail-container">
       {isError ? (
-        <Typography>I'm sorry, this Eemployee doesn't exist</Typography>
+        <div className="error-container">
+          <Typography>Ups! seems that this employee doesn't exist</Typography>
+        </div>
       ) : (
         <>
           <Typography variant="h5">Detail page</Typography>
